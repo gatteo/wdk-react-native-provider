@@ -5,7 +5,7 @@ export enum AssetTicker {
 }
 
 export enum NetworkType {
-  SEGWIT = 'bitcoin',
+  BITCOIN = 'bitcoin',
   LIGHTNING = 'lightning',
   ETHEREUM = 'ethereum',
   SOLANA = 'solana',
@@ -17,7 +17,7 @@ export enum NetworkType {
 
 export const AssetAddressMap = {
   [AssetTicker.BTC]: {
-    [NetworkType.SEGWIT]: 'bitcoin',
+    [NetworkType.BITCOIN]: 'bitcoin',
   },
   [AssetTicker.USDT]: {
     [NetworkType.ETHEREUM]: 'ethereum',
@@ -32,7 +32,7 @@ export const AssetAddressMap = {
 
 export const AssetBalanceMap = {
   [AssetTicker.BTC]: {
-    [NetworkType.SEGWIT]: 'bitcoin',
+    [NetworkType.BITCOIN]: 'bitcoin',
   },
   [AssetTicker.USDT]: {
     [NetworkType.ETHEREUM]: 'ethereum',
