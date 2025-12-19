@@ -39,7 +39,7 @@ export const SMART_CONTRACT_BALANCE_ADDRESSES = {
 
 const toNetwork = (n: NetworkType): string => {
   switch (n) {
-    case NetworkType.SEGWIT:
+    case NetworkType.BITCOIN:
       return 'bitcoin';
     case NetworkType.ETHEREUM:
       return 'ethereum';
@@ -354,7 +354,7 @@ class WDKService {
       throw new Error('WDK Manager not initialized');
     }
 
-    if (network === NetworkType.SEGWIT) {
+    if (network === NetworkType.BITCOIN) {
       return await this.wdkManager.getAddress({
         network: toNetwork(network),
         accountIndex: index,
@@ -419,7 +419,7 @@ class WDKService {
     asset: AssetTicker
   ) {
     try {
-      if (network === NetworkType.SEGWIT) {
+      if (network === NetworkType.BITCOIN) {
         const value = new Decimal(amount)
           .mul(this.getDenominationValue(AssetTicker.BTC))
           .toNumber();
@@ -504,7 +504,7 @@ class WDKService {
       );
     }
 
-    if (network === NetworkType.SEGWIT) {
+    if (network === NetworkType.BITCOIN) {
       const sendParams = {
         to: recipientAddress,
         value: new Decimal(amount)
