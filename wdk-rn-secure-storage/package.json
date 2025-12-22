@@ -1,0 +1,36 @@
+{
+  "name": "@tetherto/wdk-rn-secure-storage",
+  "version": "1.0.0",
+  "description": "Secure storage abstractions for React Native - provides secure storage for sensitive data (encrypted seeds, keys)",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "wallet",
+    "react-native",
+    "secure-storage",
+    "expo-secure-store"
+  ],
+  "author": "Tetherto",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "expo-secure-store": "~15.0.8",
+    "expo-local-authentication": "~17.0.8"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.70.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
+

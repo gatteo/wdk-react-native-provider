@@ -1,0 +1,41 @@
+{
+  "name": "@tetherto/wdk-rn-worklet",
+  "version": "1.0.0",
+  "description": "Worklet functionality for React Native wallets - worklet store, hooks, and services",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "wallet",
+    "react-native",
+    "worklet",
+    "crypto",
+    "blockchain"
+  ],
+  "author": "Tetherto",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@tetherto/wdk-rn-secure-storage": "file:../wdk-rn-secure-storage",
+    "zustand": "^5.0.9",
+    "react-native-bare-kit": "^0.11.0",
+    "react-native-mmkv": "^4.1.0",
+    "pear-wrk-wdk": "https://github.com/itsdeka/pear-wrk-wdk"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.70.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
+
